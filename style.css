@@ -1,0 +1,252 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(assets/back.png);
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 20px 100px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+z-index: 99;
+}
+
+.logo{
+    font-size: 2.3rem;
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+}
+
+.txtJogo{
+    color: #fff;
+    margin-right: 100px;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s;
+}
+
+.navigation a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navigation .btn{
+    width: 140px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+.navigation .btn:hover{
+    background: #fff;
+    color: black;
+}
+
+.fundo {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform .5s ease height .2s ease;
+    transform: scale(0);
+}
+
+.fundo.active-btn{
+    transform: scale(1);
+}
+
+.fundo.active{
+    height: 455px;
+}
+
+.fundo .content-form{
+    width: 100%;
+    padding: 40px;
+}
+
+.fundo .content-form.login{
+    transition: .17s ease;
+    transform: translateX(0);
+}
+
+.fundo.active .content-form.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+
+.fundo.active .content-form.registro{
+    transition: transform .17s ease;
+    transform: translateX(0)
+}
+
+.fundo .iconeEncerrar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #090f1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    z-index: 1;
+    font-size: 1.8em;
+    color: #fff;
+}
+
+.content-form h2{
+    font-size: 2em;
+    color: #f1efef;
+    text-align: center;
+}
+
+.content-input{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #f1efef;
+    margin: 30px 0;
+}
+
+.content-input label{
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateX(-50%);
+    font-size: 1em;
+    font-weight: 600;
+    pointer-events: none;
+    transition: .4s;
+    color: #f1efef;
+}
+
+.content-input input:focus~label,
+.content-input input:valid~label{
+    top: -5px;
+}
+
+.content-input input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:#f1efef;
+    padding:0 35px 0 5px;
+}
+
+.content-input .icone{
+    position: absolute;
+    right: 8px;
+    font-size: 1.4em;
+    color: #f1efef;
+    line-height: 57px;
+}
+
+.guardar {
+    font-size: .9em;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.guardar label input {
+    accent-color: #090f1d;
+    margin-right: 3px;
+}
+
+.guardar a{
+    color: #f1efef;
+    text-decoration: none;
+}
+
+.guardar a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #090f1d;
+    color: #f1efef;
+}
+
+.registro {
+    font-size: .9em;
+    color: #f1efef;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.registro p a{
+    color: #f1efef;
+    text-decoration: none;
+}
+
+.registro p a:hover{
+    text-decoration: underline;
+}
