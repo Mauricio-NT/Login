@@ -36,11 +36,15 @@ z-index: 99;
     color: #fff;
     user-select: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.txtJogo{
+
+.information {
+    width: 80vw;
     color: #fff;
-    margin-right: 100px;
 }
 
 .navigation a{
@@ -89,7 +93,7 @@ z-index: 99;
 }
 
 .fundo {
-    position: relative;
+    position: absolute;
     width: 400px;
     height: 440px;
     background: transparent;
@@ -130,12 +134,18 @@ z-index: 99;
 }
 
 
-.fundo.active .content-form.registro{
+.fundo.active .content-form.registrar{
     transition: transform .17s ease;
     transform: translateX(0)
 }
 
-.fundo .iconeEncerrar{
+.fundo .content-form.registrar{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.fundo .icone-encerrar{
     position: absolute;
     top: 0;
     right: 0;
@@ -201,6 +211,8 @@ z-index: 99;
     line-height: 57px;
 }
 
+
+
 .guardar {
     font-size: .9em;
     margin: -15px 0 15px;
@@ -250,4 +262,8 @@ z-index: 99;
 
 .registro p a:hover{
     text-decoration: underline;
+}
+
+.imgLogo{
+    width: 80px;
 }

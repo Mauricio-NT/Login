@@ -15,6 +15,7 @@ loginlink.addEventListener("click", () =>{
 });
 
 btn.addEventListener("click", () =>{
+    
     fundo.classList.add('active-btn');
     //console.log("Botao clicado");
 });
